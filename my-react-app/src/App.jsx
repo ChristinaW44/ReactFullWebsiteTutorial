@@ -8,13 +8,14 @@ import UserGreeting from "./UserGreeting";
 import List from "./List";
 import cardPic from './assets/diamond.png';
 import ProfilePicture from "./ProfilePicture";
+import MyComponent from "./MyComponent";
 
 function App() {
 
   return (
     <>
       <Header />
-      <ProfilePicture />
+      <MyComponent />
       <Footer />
     </>    
   );
