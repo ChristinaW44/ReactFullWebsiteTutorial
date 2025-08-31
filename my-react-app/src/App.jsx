@@ -9,13 +9,14 @@ import List from "./List";
 import cardPic from './assets/diamond.png';
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
+import Counter from "./Counter";
 
 function App() {
 
   return (
     <>
       <Header />
-      <MyComponent />
+      <Counter />
       <Footer />
     </>    
   );
