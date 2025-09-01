@@ -10,13 +10,14 @@ import cardPic from './assets/diamond.png';
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
+import ColorPicker from "./ColorPicker";
 
 function App() {
 
   return (
     <>
       <Header />
-      <MyComponent />
+      <ColorPicker />
       <Footer />
     </>    
   );
