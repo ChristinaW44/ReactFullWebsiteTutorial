@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      <ColorPicker />
+      <Counter />
       <Footer />
     </>    
   );
