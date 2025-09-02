@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      <Counter />
+      <MyComponent />
       <Footer />
     </>    
   );
