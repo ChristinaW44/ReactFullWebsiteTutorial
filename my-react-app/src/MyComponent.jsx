@@ -161,19 +161,31 @@ import React, {useState, useEffect} from "react";
 
 function MyComponent(){
     const [count, setCount] = useState(0);
+    const [colour, setColour] = useState("green");
 
     useEffect(() => {
-        document.title = `Count: ${count}`;
-    });
+        document.title = `Count: ${count} ${colour}`;
+    }, [count, colour]);
 
     function addCount(){
         setCount(c => c + 1);
     }
 
+    function subCount(){
+        setCount(c => c - 1);
+    }
+
+    function changeColour(){
+        setColour(c => c === "green" ? "red" : "green");
+    }
+
     return(
         <>
-            <p>Count: {count}</p>
+            <p style={{color: colour}}>Count: {count}</p>
             <button onClick={addCount}>Add</button>
+            <button onClick={subCount}>Subtract</button>
+            <br/>
+            <button onClick={changeColour}>Change Colour</button>
         </>
     )
 }
