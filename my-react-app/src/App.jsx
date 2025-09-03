@@ -13,13 +13,14 @@ import Counter from "./Counter";
 import ColorPicker from "./ColorPicker";
 import ToDoList from "./ToDoList";
 import DigitalClock from "./DigitalClock";
+import ComponentA from "./ComponentA";
 
 function App() {
 
   return (
     <>
       {/* <Header /> */}
-      <DigitalClock />
+      <ComponentA />
       {/* <Footer /> */}
     </>    
   );
