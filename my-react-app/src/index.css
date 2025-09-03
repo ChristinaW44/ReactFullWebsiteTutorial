@@ -85,11 +85,11 @@ input[type="color"]{
   border: 3px solid hsl(0, 0%, 80%);
 } */
 
-body{
+/* body{
   background-color: hsl(0, 0%, 10%);
-}
+} */
 
-.to-do-list{
+/* .to-do-list{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-top: 100px;
@@ -168,4 +168,4 @@ li{
   padding: 8px 12px;
   font-size: 1.4rem;
   margin-left: 10px;
-}
+} */
