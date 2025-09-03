@@ -11,14 +11,15 @@ import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
 import ColorPicker from "./ColorPicker";
+import ToDoList from "./ToDoList";
 
 function App() {
 
   return (
     <>
-      <Header />
-      <MyComponent />
-      <Footer />
+      {/* <Header /> */}
+      <ToDoList />
+      {/* <Footer /> */}
     </>    
   );
 
