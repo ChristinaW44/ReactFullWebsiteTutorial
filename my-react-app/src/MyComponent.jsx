@@ -159,33 +159,64 @@ import React, {useState, useEffect} from "react";
 
 // }
 
+// function MyComponent(){
+//     const [count, setCount] = useState(0);
+//     const [colour, setColour] = useState("green");
+
+//     useEffect(() => {
+//         document.title = `Count: ${count} ${colour}`;
+//     }, [count, colour]);
+
+//     function addCount(){
+//         setCount(c => c + 1);
+//     }
+
+//     function subCount(){
+//         setCount(c => c - 1);
+//     }
+
+//     function changeColour(){
+//         setColour(c => c === "green" ? "red" : "green");
+//     }
+
+//     return(
+//         <>
+//             <p style={{color: colour}}>Count: {count}</p>
+//             <button onClick={addCount}>Add</button>
+//             <button onClick={subCount}>Subtract</button>
+//             <br/>
+//             <button onClick={changeColour}>Change Colour</button>
+//         </>
+//     )
+// }
+
 function MyComponent(){
-    const [count, setCount] = useState(0);
-    const [colour, setColour] = useState("green");
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
 
     useEffect(() => {
-        document.title = `Count: ${count} ${colour}`;
-    }, [count, colour]);
+        window.addEventListener("resize", handleResize);
+        console.log("EVENT LISTENER ADDED");
 
-    function addCount(){
-        setCount(c => c + 1);
-    }
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            console.log("EVENT LISTENER REMOVED");
+        }
+    }, []);
 
-    function subCount(){
-        setCount(c => c - 1);
-    }
+    useEffect(() => {
+        document.title = `Size: ${width} x ${height}`;
+    }, [width, height]);
 
-    function changeColour(){
-        setColour(c => c === "green" ? "red" : "green");
+    function handleResize(){
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
     }
 
     return(
         <>
-            <p style={{color: colour}}>Count: {count}</p>
-            <button onClick={addCount}>Add</button>
-            <button onClick={subCount}>Subtract</button>
-            <br/>
-            <button onClick={changeColour}>Change Colour</button>
+            <p>Window Width: {width}px</p>
+            <p>Window Height: {height}px</p>
         </>
     )
 }
